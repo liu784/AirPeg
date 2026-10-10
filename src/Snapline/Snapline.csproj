@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Snapline</AssemblyName>
+    <AssemblyTitle>AirPeg</AssemblyTitle>
+    <RootNamespace>Snapline</RootNamespace>
+    <StartupObject>Snapline.Program</StartupObject>
+    <ApplicationIcon>Assets\AirPeg.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Version>1.8.5</Version>
+    <Product>AirPeg — 轻挂</Product>
+    <Authors>Snapline</Authors>
+    <Description>AirPeg — a lightweight Windows screenshot assistant. 轻挂：轻盈、优雅的 Windows 截图助手。</Description>
+    <Copyright>MIT License</Copyright>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CA1416;WFAC010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\AirPeg.ico" />
+    <Resource Include="Assets\Shaders\ChromeGlass.ps" />
+    <Resource Include="Assets\AirPegMark.png" />
+    <Resource Include="Assets\AirPegLockup.png" />
+    <Resource Include="Assets\AirPegLockupDark.png" />
+    <Resource Include="Assets\Fonts\Manrope-ExtraBold.ttf" />
+  </ItemGroup>
+
+  <Target Name="BuildLiveGlass" BeforeTargets="PrepareResourceNames">
+    <Exec Command="pwsh -NoProfile -File &quot;$(MSBuildProjectDirectory)\..\..\scripts\Build-LiveGlass.ps1&quot;" />
+  </Target>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\native\LiveGlass\build\Tendedero.LiveGlass.dll" LogicalName="Snapline.LiveGlass.dll" />
+  </ItemGroup>
+</Project>
