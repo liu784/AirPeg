@@ -34,7 +34,7 @@ try {
     & $DotNet --version
     if ($LASTEXITCODE -ne 0) { throw 'The pinned .NET 8.0.425 SDK is required.' }
     $restore = @('restore',$project,'--configfile',(Join-Path $PSScriptRoot 'NuGet.Config'))
-    if ($Portable) { $restore += @('-r','win-x64','-p:SelfContained=true','-p:RuntimeFrameworkVersion=8.0.31') }
+    if ($Portable) { $restore += @('-r','win-x64','-p:SelfContained=true') }
     & $DotNet @restore
     if ($LASTEXITCODE -ne 0) { throw 'Dependency restore failed.' }
     if (-not $Portable) {
@@ -45,7 +45,7 @@ try {
     $version = '1.8.5'
     $out = Join-Path $repoRoot "dist\AirPeg-$version-win-x64"
     if (Test-Path -LiteralPath $out) { throw 'Output folder already exists. Choose a fresh clone/build directory to preserve earlier artifacts.' }
-    & $DotNet publish $project -c Release -r win-x64 --no-restore --self-contained true -o $out '-p:RuntimeFrameworkVersion=8.0.31' '-p:PublishSingleFile=true' '-p:IncludeNativeLibrariesForSelfExtract=true' '-p:EnableCompressionInSingleFile=true' '-p:DebugType=none' '-p:DebugSymbols=false'
+    & $DotNet publish $project -c Release -r win-x64 --no-restore --self-contained true -o $out '-p:PublishSingleFile=true' '-p:IncludeNativeLibrariesForSelfExtract=true' '-p:EnableCompressionInSingleFile=true' '-p:DebugType=none' '-p:DebugSymbols=false'
     if ($LASTEXITCODE -ne 0) { throw 'Self-contained publish failed.' }
     Move-Item -LiteralPath (Join-Path $out 'Snapline.exe') -Destination (Join-Path $out 'AirPeg.exe')
     Set-Content -LiteralPath (Join-Path $out 'portable.flag') -Value 'Store settings and captures in the adjacent Data folder.' -Encoding utf8NoBOM
