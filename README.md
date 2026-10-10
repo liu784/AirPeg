@@ -20,11 +20,11 @@ AirPeg 是一款专为 Windows 打造的截图管理工具。
 
 精致的 Liquid Glass 透明界面、自然的物理动画，以及轻量化桌面交互，让每一张截图都触手可及。
 
-[![AirPeg Windows 功能演示封面](docs/media/AirPeg-Windows-cover.png)](https://github.com/liu784/AirPeg/releases/tag/untagged-f090a4a85b5663aaa6b1)
+[![AirPeg Windows 功能演示封面](docs/media/AirPeg-Windows-cover.png)](https://github.com/liu784/AirPeg/releases/tag/v1.8.5-preview.1)
 
-[观看或下载完整 90 秒功能演示](https://github.com/liu784/AirPeg/releases/tag/untagged-f090a4a85b5663aaa6b1) · [从源码构建](BUILDING.md) · [许可证与致谢](NOTICE.md)
+[观看或下载完整 90 秒功能演示](https://github.com/liu784/AirPeg/releases/tag/v1.8.5-preview.1) · [从源码构建](BUILDING.md) · [许可证与致谢](NOTICE.md)
 
-当前为 **1.8.5 预览发布准备版**。仓库保持私有，文件位于维护者可见的 Draft Release；P5 稳定性验收和最终公开内容审核完成前，不发布正式稳定版。
+当前公开发行 **1.8.5 预览版**。源码和便携包已开放下载；P5 稳定性最终验收尚未完成，本版本保留 Pre-release 标记，不宣称正式稳定版。
 
 ## 功能
 
@@ -66,4 +66,4 @@ MIT 源码许可、第三方版权声明与字体许可分别保存在 [LICENSE]
 
 ## English
 
-AirPeg is a lightweight Windows screenshot manager with a hanging clothesline, native Liquid Glass UI and natural animations. It defaults to Simplified Chinese and supports English. This private preparation repository contains a preview build, not a final stable release. See [build instructions](BUILDING.md), [credits](NOTICE.md) and [known limitations](docs/KNOWN-LIMITATIONS.md).
+AirPeg is a lightweight Windows screenshot manager with a hanging clothesline, native Liquid Glass UI and natural animations. It defaults to Simplified Chinese and supports English. This public repository provides the 1.8.5 preview release. P5 stability acceptance remains pending; this is not a final stable release. See [build instructions](BUILDING.md), [credits](NOTICE.md) and [known limitations](docs/KNOWN-LIMITATIONS.md).

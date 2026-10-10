@@ -17,7 +17,7 @@ Set-Location AirPeg
 pwsh -NoProfile -File .\scripts\Build-AirPeg.ps1
 ```
 
-私有准备期需要维护者授予仓库访问权限。普通构建输出位于 `src/Snapline/bin/Release/net8.0-windows10.0.19041.0/`，内部程序集仍叫 Snapline，这是兼容标识；正式便携入口叫 AirPeg.exe。
+公开仓库可直接克隆。普通构建输出位于 `src/Snapline/bin/Release/net8.0-windows10.0.19041.0/`，内部程序集仍叫 Snapline，这是兼容标识；正式便携入口叫 AirPeg.exe。
 
 使用项目本地 SDK：
 
