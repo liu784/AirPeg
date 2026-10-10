@@ -20,9 +20,9 @@ AirPeg 是一款专为 Windows 打造的截图管理工具。
 
 精致的 Liquid Glass 透明界面、自然的物理动画，以及轻量化桌面交互，让每一张截图都触手可及。
 
-[![AirPeg Windows 功能演示封面](docs/media/AirPeg-Windows-cover.png)](https://github.com/liu784/AirPeg/releases)
+[![AirPeg Windows 功能演示封面](docs/media/AirPeg-Windows-cover.png)](https://github.com/liu784/AirPeg/releases/tag/untagged-a92053d8d03b69ec9bba)
 
-[观看或下载完整 90 秒功能演示](https://github.com/liu784/AirPeg/releases) · [从源码构建](BUILDING.md) · [许可证与致谢](NOTICE.md)
+[观看或下载完整 90 秒功能演示](https://github.com/liu784/AirPeg/releases/tag/untagged-a92053d8d03b69ec9bba) · [从源码构建](BUILDING.md) · [许可证与致谢](NOTICE.md)
 
 当前为 **1.8.5 预览发布准备版**。仓库保持私有，文件位于维护者可见的 Draft Release；P5 稳定性验收和最终公开内容审核完成前，不发布正式稳定版。
 
